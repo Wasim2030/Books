@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Destructuring Array</h1>
+
+  <script>
+    const vehicles = ['mustang', 'f-150', 'expedition'];
+    // console.log(vehicles)
+    const car = vehicles[0]
+    const truck = vehicles[1]
+    const model = vehicles[0]
+    // console.log(car)
+    // console.log(truck)
+    // console.log(model)
+
+    const [one, two, three] = vehicles;
+    // console.log(vehicles)
+    // console.log(one)
+    // console.log(two)
+    // console.log(three)
+
+    // ***********************
+    function calculate(a, b) {
+      const add = a + b
+      const sub = a - b
+      const multiply = a * b
+      const divide = a / b
+      return [add, sub, multiply, divide]
+    }
+
+    const [add, sub, multiply, divide] = calculate(9, 5)
+
+    document.write("<p> add : " + add + "</p>")
+    document.write("<p> sub: " + sub + "</p>")
+    document.write("<p> multiply : " + multiply + "</p>")
+    document.write("<p> divide : " + divide + "</p>")
+
+
+
+  </script>
+
+</body>
+
+</html>

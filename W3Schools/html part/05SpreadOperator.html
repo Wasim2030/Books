@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Spread operator</h1>
+
+  <script>
+    // spread operator - array
+    const arrOne = [1, 2, 3]
+    const arrTwo = [3, 4, 5]
+    const arrAll = [...arrOne, ...arrTwo]
+    // console.log(arrAll)
+
+    // ********************************
+    // destructuring and spread operator
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+    // console.log(numbers)
+    const [one, two, ...rest] = numbers;
+    // console.log(numbers)
+    // console.log(one)
+    // console.log(two)
+    // console.log(...rest)
+
+    // **************************************
+    // spread operator - objects
+    const myVehicle = {
+      brand: 'Ford',
+      model: 'Mustang',
+      color: 'red'
+    }
+
+    const updateMyVehicle = {
+      type: 'car',
+      year: 2021,
+      color: 'yellow'
+    }
+
+    const allVehicle = { ...myVehicle, ...updateMyVehicle }
+    console.log(allVehicle)
+
+
+  </script>
+
+</body>
+
+</html>

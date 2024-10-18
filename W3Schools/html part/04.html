@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Destructuring Object</h1>
+  <p id="demo"></p>
+
+  <script>
+    const vehicleOne = {
+      brand: 'Ford',
+      model: 'Mustang',
+      type: 'car',
+      year: 2021,
+      color: 'red'
+    }
+
+    function myVehicle(details) {
+      const message = "i have " + details.type + " other deatails are " + details.brand + details.model + details.year + details.color
+      return message
+    }
+    const a = myVehicle(vehicleOne)
+    // console.log(a)
+    // console.log(myVehicle(vehicleOne))
+
+    // *********************************************
+
+    const vehicletwo = {
+      brand: 'Ford',
+      model: 'Mustang',
+      type: 'car',
+      year: 2021,
+      color: 'red',
+      registration: {
+        city: 'Houston',
+        state: 'Texas',
+        country: 'USA'
+      }
+    }
+    // console.log(vehicletwo.brand)
+    // console.log(vehicletwo.model)
+    // console.log(vehicletwo.registration.city)
+    // console.log(vehicletwo.registration.country)
+
+    // ****************************************************
+
+    const vehicleThree = {
+      brand: 'Ford',
+      model: 'Mustang',
+      type: 'car',
+      year: 2021,
+      color: 'red',
+      registration: {
+        city: 'Houston',
+        state: 'Texas',
+        country: 'USA'
+      }
+    }
+
+    function vDetails({ model, registration: { city } }) {
+      const message = model + " and " + city;
+      document.getElementById("demo").innerHTML = message;
+    }
+
+    vDetails(vehicleThree)
+
+  </script>
+
+</body>
+
+</html>

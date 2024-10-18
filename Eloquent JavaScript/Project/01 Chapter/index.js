@@ -26,10 +26,11 @@ console.log(9 > 4);
 console.log(9 < 4);
 
 // comparision operator: < and > => binary operator
-console.log("a" > "Z"); //uppercase letter < lowercase letter
+console.log("a" > "z"); //uppercase letter < lowercase letter
+console.log("A" < "z"); //uppercase letter < lowercase letter
 
 console.log(NaN == NaN);
-console.log("***");
+console.log("firsst ***");
 console.log(1 + 1 == 2 && 10 * 10 > 50);
 
 // ternary opetator - operates on three values
@@ -52,3 +53,8 @@ console.log("**************");
 console.log(false == 0);
 console.log(false == NaN); // ???????
 console.log(false == "");
+
+// short circuiting
+console.log(null || "user");
+console.log("wasim" || "user");
+console.log("true" || "user");
